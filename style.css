@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #eaeaea;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00ff87, #60efff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 255, 135, 0.3);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.stat-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 135, 0.2);
+    border-radius: 12px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #8a8fa3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ff87;
+    margin-top: 4px;
+}
+
+.game-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0, 255, 135, 0.3),
+                0 0 80px rgba(96, 239, 255, 0.1);
+    border: 2px solid rgba(0, 255, 135, 0.3);
+    background: #0a0a15;
+}
+
+#gameCanvas {
+    display: block;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+}
+
+#gameCanvas canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 21, 0.92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay-content h2 {
+    color: #00ff87;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    color: #b0b3c1;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+button {
+    background: linear-gradient(135deg, #00ff87, #60efff);
+    color: #0a0a15;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 255, 135, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 135, 0.5);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.controls-info {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #8a8fa3;
+    line-height: 1.6;
+}
+
+.controls-info strong {
+    color: #60efff;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #eaeaea;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+}
+
+.btn-danger {
+    background: rgba(255, 60, 60, 0.15);
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 60, 60, 0.4);
+    box-shadow: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.btn-danger:hover {
+    background: rgba(255, 60, 60, 0.25);
+    box-shadow: none;
+}
+
+@media (max-width: 450px) {
+    h1 { font-size: 1.8rem; }
+    .stat-value { font-size: 1.4rem; }
+    .overlay-content h2 { font-size: 1.4rem; }
+}

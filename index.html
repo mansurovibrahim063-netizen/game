@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 3D Iloncha o'yini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐍 3D Iloncha</h1>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-label">Ball</span>
+                <span class="stat-value" id="score">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Rekord</span>
+                <span class="stat-value" id="highScore">0</span>
+            </div>
+        </div>
+
+        <div class="game-wrapper">
+            <div id="gameCanvas"></div>
+
+            <div class="overlay" id="overlay">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">3D Iloncha o'yini</h2>
+                    <p id="overlayText">Boshlash uchun tugmani bosing yoki bo'sh joyni bosing</p>
+                    <button id="startBtn">Boshlash</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-info">
+            <p>⬆️ ⬇️ ⬅️ ➡️ yoki W A S D — harakatlanish</p>
+            <p><strong>Bo'sh joy</strong> — pauza / davom etish</p>
+        </div>
+
+        <div class="buttons">
+            <button id="pauseBtn" class="btn-secondary">Pauza</button>
+            <button id="restartBtn" class="btn-secondary">Qayta boshlash</button>
+            <button id="viewBtn" class="btn-secondary">📷 Ko'rinish: Yuqori</button>
+            <button id="muteBtn" class="btn-secondary">🔊 Ovoz: Yoniq</button>
+            <button id="resetRecordBtn" class="btn-danger">Rekordni o'chirish</button>
+        </div>
+    </div>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
